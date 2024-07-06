@@ -42,7 +42,7 @@ To be able to install the app please do the following commands
     psql postgres
     ```
 
-7. Create a table called deskbird:
+7. Inside postgres console create a table called deskbird or any name you desire:
     ```
     CREATE TABLE deskbird
     ```
@@ -56,7 +56,7 @@ To be able to install the app please do the following commands
 
     ```
     PORT=3000
-    DATABASE_URL="postgresql://username:password@localhost:5432/deskbird"
+    DATABASE_URL="postgresql://username:password@localhost:5432/databaseName"
     ```
 
 10. Run Prisma seed file:
