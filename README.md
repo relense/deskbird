@@ -61,19 +61,19 @@ To be able to install the app please do the following commands
     DATABASE_URL="postgresql://username:password@localhost:5432/databaseName"
     ```
 
-10. Run Prisma seed file:
-    ```
-    npx prisma db seed
-    ```
-
-11. Run migrations:
+10. Run migrations:
     ```
     npx prisma migrate dev
     ```
 
-12. Run prisma generate:
+11. Run prisma generate:
     ```
     npx prisma generate
+    ```
+
+12. Run Prisma seed file:
+    ```
+    npx prisma db seed
     ```
     
 ## Starting the App
