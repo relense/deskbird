@@ -14,12 +14,12 @@ To be able to install the app please do the following commands
 
 1. Clone the repo:
    ```
-   git clone https://github.com/relense/deskbird-challenge.git
+   git clone https://github.com/relense/deskbird
    ```
 
 2. Navigate to the project directory:
    ```
-   cd deskbird-challenge
+   cd deskbird
    ```
 
 3. Install dependencies:
