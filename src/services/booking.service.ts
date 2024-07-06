@@ -9,6 +9,18 @@ async function createAdminBooking(params: {
   startDateTime: Date;
   endDateTime: Date;
 }) {
+  const currentTime = new Date();
+  const startDate = new Date(params.startDateTime);
+  const endDate = new Date(params.endDateTime);
+
+  if (
+    startDate.getTime() <= currentTime.getTime() ||
+    endDate.getTime() <= currentTime.getTime() ||
+    startDate.getTime() >= endDate.getTime()
+  ) {
+    throw Errors.invalidDates(params.startDateTime, params.endDateTime);
+  }
+
   // Confirm if the parking spot exists.
   const parkingSpot = await prisma.parkingSpot.findFirst({
     where: {
@@ -103,6 +115,18 @@ async function updateAdminBooking(params: {
   startDateTime: Date;
   endDateTime: Date;
 }) {
+  const currentTime = new Date();
+  const startDate = new Date(params.startDateTime);
+  const endDate = new Date(params.endDateTime);
+
+  if (
+    startDate.getTime() <= currentTime.getTime() ||
+    endDate.getTime() <= currentTime.getTime() ||
+    startDate.getTime() >= endDate.getTime()
+  ) {
+    throw Errors.invalidDates(params.startDateTime, params.endDateTime);
+  }
+
   // Find the active booking we want
   const activeBooking = await prisma.booking.findFirst({
     where: {
@@ -194,6 +218,18 @@ async function createClientBooking(params: {
   startDateTime: Date;
   endDateTime: Date;
 }) {
+  const currentTime = new Date();
+  const startDate = new Date(params.startDateTime);
+  const endDate = new Date(params.endDateTime);
+
+  if (
+    startDate.getTime() <= currentTime.getTime() ||
+    endDate.getTime() <= currentTime.getTime() ||
+    startDate.getTime() >= endDate.getTime()
+  ) {
+    throw Errors.invalidDates(params.startDateTime, params.endDateTime);
+  }
+
   // Confirm if the parking spot exists.
   const parkingSpot = await prisma.parkingSpot.findFirst({
     where: {
@@ -294,6 +330,18 @@ async function updateClientBooking(params: {
   startDateTime: Date;
   endDateTime: Date;
 }) {
+  const currentTime = new Date();
+  const startDate = new Date(params.startDateTime);
+  const endDate = new Date(params.endDateTime);
+
+  if (
+    startDate.getTime() <= currentTime.getTime() ||
+    endDate.getTime() <= currentTime.getTime() ||
+    startDate.getTime() >= endDate.getTime()
+  ) {
+    throw Errors.invalidDates(params.startDateTime, params.endDateTime);
+  }
+
   const booking = await prisma.booking.findFirst({
     where: {
       id: params.bookingId,
