@@ -6,6 +6,7 @@ This node express app was created to showcase how admins and users can manage th
 
 - [Installation](#installation)
 - [Starting the App](#starting-the-app)
+- [Postman Collection](#postman-collection)
 - [Important Commands](#important-commands)
 
 ## Installation
@@ -84,6 +85,12 @@ To the able to run the app please run the following command
     ```
     npm run dev
     ```
+
+## Postman Collection
+
+In the root of the project there is a folder called postman.
+This folder has a json file that can be imported to postman.
+This will make it easier to test the endpoints.
 
 ## Important Commands
 
