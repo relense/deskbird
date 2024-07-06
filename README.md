@@ -44,8 +44,10 @@ To be able to install the app please do the following commands
 
 7. Inside postgres console create a table called deskbird or any name you desire:
     ```
-    CREATE TABLE deskbird
+    CREATE DATABASE deskbird;
     ```
+
+    Don't forget the ```;```
 
 8. Create a .env file:
     ```
